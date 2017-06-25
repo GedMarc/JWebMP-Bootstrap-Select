@@ -6,13 +6,16 @@
 package za.co.mmagon.jwebswing.plugins.bootstrapselect;
 
 import org.junit.Test;
+import za.co.mmagon.BaseTestClass;
+import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.base.html.Option;
+import za.co.mmagon.jwebswing.plugins.bootstrap.forms.BSForm;
 
 /**
  *
  * @author Marc Magon
  */
-public class BootstrapSelectTest
+public class BootstrapSelectTest extends BaseTestClass
 {
 
     public BootstrapSelectTest()
@@ -43,5 +46,17 @@ public class BootstrapSelectTest
         bs.add(new Option("Option 1"));
         bs.getOptions().setActionsBox(true);
         System.out.println(bs.renderJavascript());
+    }
+
+    @Test
+    public void testHtml()
+    {
+        Page p = getInstance();
+        BSForm form = new BSForm();
+        BootstrapSelect bs = new BootstrapSelect();
+        p.getOptions().setDynamicRender(false);
+        p.getBody().add(form);
+        form.add(bs);
+        System.out.println(p.toString(true));
     }
 }

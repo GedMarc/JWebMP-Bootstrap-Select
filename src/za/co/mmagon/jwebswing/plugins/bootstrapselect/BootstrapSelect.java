@@ -1,6 +1,7 @@
 package za.co.mmagon.jwebswing.plugins.bootstrapselect;
 
 import za.co.mmagon.jwebswing.base.html.Select;
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
  * Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
@@ -8,6 +9,8 @@ import za.co.mmagon.jwebswing.base.html.Select;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
+@ComponentInformation(name = "Bootstrap Select", description = "Turn checkboxes    and radio buttons    into toggle switches  ",
+        url = "https://github.com/GedMarc/JWebSwing-Bootstrap-Select")
 public class BootstrapSelect extends Select<BootstrapSelect>
 {
 

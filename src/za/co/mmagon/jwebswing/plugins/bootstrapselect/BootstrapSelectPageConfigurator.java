@@ -14,7 +14,7 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
  */
 @PluginInformation(pluginName = "Bootstrap Select",
         pluginDescription = "Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.",
-        pluginUniqueName = "jwebswing-toastr",
+        pluginUniqueName = "jwebswing-bootstrap-select",
         pluginVersion = "2.1.3",
         pluginCategories = "select, dropdown, bootstrap, ui,web ui, framework",
         pluginSubtitle = "Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.",
@@ -45,7 +45,7 @@ class BootstrapSelectPageConfigurator extends PageConfigurator
         if (!page.isConfigured())
         {
             JQueryPageConfigurator.setRequired(page.getBody(), true);
-            BootstrapPageConfigurator.setBootstrapRequired(page.getBody(), true);
+            BootstrapPageConfigurator.setRequired(page.getBody(), true);
             page.getBody().addJavaScriptReference(BootstrapSelectReferencePool.BootstrapSelect.getJavaScriptReference());
             page.getBody().addCssReference(BootstrapSelectReferencePool.BootstrapSelect.getCssReference());
         }
