@@ -13,8 +13,8 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 enum BootstrapSelectReferencePool implements ReferencePool
 {
-    BootstrapSelect(new JavascriptReference("Toastr", 2.3, "bower_components/bootstrap-select/dist/js/bootstrap-select.js"),
-            new CSSReference("Toastr", 2.3, "bower_components/bootstrap-select/dist/css/bootstrap-select.css"));
+    BootstrapSelect(new JavascriptReference("BootstrapSelect", 2.3, "bower_components/bootstrap-select/dist/js/bootstrap-select.js"),
+            new CSSReference("BootstrapSelect", 2.3, "bower_components/bootstrap-select/dist/css/bootstrap-select.css"));
     /**
      * Any sub data
      */
