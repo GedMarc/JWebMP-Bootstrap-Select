@@ -9,22 +9,21 @@ import org.junit.Test;
 import za.co.mmagon.BaseTestClass;
 
 /**
- *
  * @author Marc Magon
  */
 public class BootstrapSelectFeatureTest extends BaseTestClass
 {
 
-    public BootstrapSelectFeatureTest()
-    {
-    }
+	public BootstrapSelectFeatureTest()
+	{
+	}
 
-    @Test
-    public void testSomeMethod()
-    {
-        BootstrapSelectFeature bsf = new BootstrapSelectFeature(getInstance().getBody());
-        bsf.getOptions().setIconBase("fa fa-bell-o");
-        System.out.println(bsf.renderJavascript());
-    }
+	@Test
+	public void testSomeMethod()
+	{
+		BootstrapSelectFeature bsf = new BootstrapSelectFeature(getInstance().getBody());
+		bsf.getOptions().setIconBase("fa fa-bell-o");
+		System.out.println(bsf.renderJavascript());
+	}
 
 }

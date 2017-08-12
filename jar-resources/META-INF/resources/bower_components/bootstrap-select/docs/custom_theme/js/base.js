@@ -1,5 +1,5 @@
 /* Highlight */
-$( document ).ready(function() {
+$(document).ready(function () {
     hljs.initHighlightingOnLoad();
     $('table').addClass('table table-striped table-hover');
     $('pre').addClass('highlight');
@@ -10,12 +10,12 @@ $('body').scrollspy({
 });
 
 $('.bs-sidebar').affix({
-  offset: {
-    top: 210
-  }
+    offset: {
+        top: 210
+    }
 });
 
 /* Prevent disabled links from causing a page reload */
-$("li.disabled a").click(function() {
+$("li.disabled a").click(function () {
     event.preventDefault();
 });

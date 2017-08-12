@@ -12,35 +12,35 @@ import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 public class BootstrapSelectFeature extends Feature<BootstrapSelectOptions, BootstrapSelectFeature>
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /*
-     * Constructs a new BootstrapSelectFeature
-     */
-    public BootstrapSelectFeature(ComponentHierarchyBase component)
-    {
-        super("BootstrapSelectFeature", component);
-    }
+	/*
+	 * Constructs a new BootstrapSelectFeature
+	 */
+	public BootstrapSelectFeature(ComponentHierarchyBase component)
+	{
+		super("BootstrapSelectFeature", component);
+	}
 
-    @Override
-    protected void assignFunctionsToComponent()
-    {
-        addQuery(getComponent().getJQueryID() + "selectpicker(" + getOptions() + ");" + getNewLine());
-    }
+	@Override
+	protected void assignFunctionsToComponent()
+	{
+		addQuery(getComponent().getJQueryID() + "selectpicker(" + getOptions() + ");" + getNewLine());
+	}
 
-    /**
-     * Returns the options
-     *
-     * @return
-     */
-    @Override
-    public BootstrapSelectOptions getOptions()
-    {
-        if (super.getOptions() == null)
-        {
-            setOptions(new BootstrapSelectOptions());
-        }
-        return super.getOptions();
-    }
+	/**
+	 * Returns the options
+	 *
+	 * @return
+	 */
+	@Override
+	public BootstrapSelectOptions getOptions()
+	{
+		if (super.getOptions() == null)
+		{
+			setOptions(new BootstrapSelectOptions());
+		}
+		return super.getOptions();
+	}
 
 }
