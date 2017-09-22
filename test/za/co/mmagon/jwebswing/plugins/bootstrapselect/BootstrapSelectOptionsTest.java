@@ -7,11 +7,11 @@ import org.junit.Test;
  */
 public class BootstrapSelectOptionsTest
 {
-
+	
 	public BootstrapSelectOptionsTest()
 	{
 	}
-
+	
 	@Test
 	public void testSomeMethod()
 	{
@@ -19,5 +19,5 @@ public class BootstrapSelectOptionsTest
 		bso.setActionsBox(true);
 		System.out.println(bso);
 	}
-
+	
 }
