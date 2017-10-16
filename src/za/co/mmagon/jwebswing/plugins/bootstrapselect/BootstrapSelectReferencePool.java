@@ -29,14 +29,6 @@ enum BootstrapSelectReferencePool implements ReferencePool
 	{
 
 	}
-
-	/**
-	 * A new AngularSlimScrollReferencePool with data
-	 */
-	BootstrapSelectReferencePool(String data)
-	{
-
-	}
 	
 	BootstrapSelectReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{

@@ -148,8 +148,12 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private Integer windowPadding;
 	
+	/**
+	 * Construct a new instance of the JS Bootstrap Select Options
+	 */
 	public BootstrapSelectOptions()
 	{
+		//Nothing Needed
 	}
 	
 	/**
