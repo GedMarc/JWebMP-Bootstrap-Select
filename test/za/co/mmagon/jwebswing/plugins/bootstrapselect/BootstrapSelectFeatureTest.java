@@ -5,6 +5,7 @@
  */
 package za.co.mmagon.jwebswing.plugins.bootstrapselect;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.BaseTestClass;
 
@@ -24,6 +25,9 @@ public class BootstrapSelectFeatureTest extends BaseTestClass
 		BootstrapSelectFeature bsf = new BootstrapSelectFeature(getInstance().getBody());
 		bsf.getOptions().setIconBase("fa fa-bell-o");
 		System.out.println(bsf.renderJavascript());
+		Assertions.assertEquals("$(\"#body\").selectpicker({\n" +
+				                        "  \"iconBase\" : \"fa fa-bell-o\"\n" +
+				                        "});\n", bsf.renderJavascript().toString());
 	}
 
 }

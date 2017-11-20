@@ -1,5 +1,6 @@
 package za.co.mmagon.jwebswing.plugins.bootstrapselect;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -18,6 +19,9 @@ public class BootstrapSelectOptionsTest
 		BootstrapSelectOptions bso = new BootstrapSelectOptions();
 		bso.setActionsBox(true);
 		System.out.println(bso);
+		Assertions.assertEquals("{\n" +
+				                        "  \"actionsBox\" : true\n" +
+				                        "}", bso.toString());
 	}
 	
 }
