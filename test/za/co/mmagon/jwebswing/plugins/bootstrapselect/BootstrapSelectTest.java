@@ -37,7 +37,7 @@ public class BootstrapSelectTest extends BaseTestClass
 	{
 		BootstrapSelect bs = new BootstrapSelect();
 		bs.setID("id");
-		bs.add(new Option("Option 1")).setID("id");
+		bs.add(new Option<>("Option 1").setID("id"));
 		bs.getOptions().setActionsBox(true);
 		System.out.println(bs.toString(true));
 		Assertions.assertEquals("<select id=\"id\">\n" +
@@ -55,7 +55,7 @@ public class BootstrapSelectTest extends BaseTestClass
 		System.out.println(bs.renderJavascript());
 		Assertions.assertEquals("$(\"#id\").selectpicker({\n" +
 				                        "  \"actionsBox\" : true\n" +
-				                        "});", bs.renderJavascript().toString());
+				                        "});\n", bs.renderJavascript().toString());
 	}
 
 	@Test
