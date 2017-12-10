@@ -14,7 +14,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All).*
+	 * When set to true, adds two buttons to the top of the dropdown menu (Select All Deselect All).*
 	 */
 	private Boolean actionsBox;
 	/**
@@ -607,7 +607,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 
 	/**
 	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
-	 * title. count displays the total number of selected options. count > x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
+	 * title. count displays the total number of selected options. count greater than x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
 	 *
 	 * @return
 	 */
@@ -618,7 +618,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 
 	/**
 	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
-	 * title. count displays the total number of selected options. count > x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
+	 * title. count displays the total number of selected options. count greater than x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
 	 *
 	 * @param selectedTextFormat
 	 *
