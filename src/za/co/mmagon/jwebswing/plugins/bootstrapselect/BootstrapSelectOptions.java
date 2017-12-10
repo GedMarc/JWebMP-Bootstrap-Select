@@ -157,7 +157,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All).
+	 * When set to true, adds two buttons to the top of the dropdown menu (Select All  Deselect All).
 	 *
 	 * @return
 	 */
@@ -167,7 +167,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All).
+	 * When set to true, adds two buttons to the top of the dropdown menu (Select All  Deselect All).
 	 *
 	 * @param actionsBox
 	 *
@@ -203,7 +203,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * "Sets the format for the text displayed when selectedTextFormat is count or count > #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
+	 * "Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string."
 	 *
 	 * @return
@@ -214,7 +214,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * "Sets the format for the text displayed when selectedTextFormat is count or count > #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
+	 * "Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string."
 	 *
 	 * @param countSelectedText
