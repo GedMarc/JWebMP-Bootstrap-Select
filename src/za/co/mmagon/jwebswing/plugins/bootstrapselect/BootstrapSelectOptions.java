@@ -10,9 +10,9 @@ import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
  */
 public class BootstrapSelectOptions extends JavaScriptPart
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All).*
 	 */
@@ -22,7 +22,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String container;
 	/**
-	 * Sets the format for the text displayed when selectedTextFormat is count or count > #. {0} is the selected amount. {1} is total available for selection.When set to a function, the first
+	 * Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection.When set to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string.*
 	 */
 	private String countSelectedText;
@@ -69,8 +69,8 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String liveSearchStyle;
 	/**
-	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an <optgroup>, in which case it
-	 * only applies to that <optgroup>.*
+	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in which case it
+	 * only applies to that optgroup.*
 	 */
 	private Integer maxOptions;
 	/**
@@ -97,7 +97,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	private String selectAllText;
 	/**
 	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
-	 * title. count displays the total number of selected options. count > x behaves like values until the number of selected options is greater than x; after that, it behaves like count.*
+	 * title. count displays the total number of selected options. count greather than x behaves like values until the number of selected options is greater than x; after that, it behaves like count.*
 	 */
 	private String selectedTextFormat;
 	/**
@@ -147,7 +147,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 * Alternatively, an array of integers can be used in the format [top, right, bottom, left].*
 	 */
 	private Integer windowPadding;
-	
+
 	/**
 	 * Construct a new instance of the JS Bootstrap Select Options
 	 */
@@ -155,7 +155,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		//Nothing Needed
 	}
-	
+
 	/**
 	 * When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All).
 	 *
@@ -165,7 +165,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return actionsBox;
 	}
-	
+
 	/**
 	 * When set to true, adds two buttons to the top of the dropdown menu (Select All & Deselect All).
 	 *
@@ -178,7 +178,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.actionsBox = actionsBox;
 		return this;
 	}
-	
+
 	/**
 	 * When set to a string, appends the select to a specific element or selector, e.g., container: body | .main-body
 	 *
@@ -188,7 +188,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return container;
 	}
-	
+
 	/**
 	 * When set to a string, appends the select to a specific element or selector, e.g., container: body | .main-body
 	 *
@@ -201,7 +201,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.container = container;
 		return this;
 	}
-	
+
 	/**
 	 * "Sets the format for the text displayed when selectedTextFormat is count or count > #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string."
@@ -212,7 +212,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return countSelectedText;
 	}
-	
+
 	/**
 	 * "Sets the format for the text displayed when selectedTextFormat is count or count > #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string."
@@ -226,7 +226,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.countSelectedText = countSelectedText;
 		return this;
 	}
-	
+
 	/**
 	 * The text on the button that deselects all options when actionsBox is enabled.
 	 *
@@ -236,7 +236,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return deselectAllText;
 	}
-	
+
 	/**
 	 * The text on the button that deselects all options when actionsBox is enabled.
 	 *
@@ -249,7 +249,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.deselectAllText = deselectAllText;
 		return this;
 	}
-	
+
 	/**
 	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the left.
 	 *
@@ -259,7 +259,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return dropdownAlignRight;
 	}
-	
+
 	/**
 	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the left.
 	 *
@@ -272,7 +272,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.dropdownAlignRight = dropdownAlignRight;
 		return this;
 	}
-	
+
 	/**
 	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally. Otherwise, it becomes a
 	 * dropup. If dropupAuto is set to false, dropups must be called manually.
@@ -283,7 +283,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return dropupAuto;
 	}
-	
+
 	/**
 	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally. Otherwise, it becomes a
 	 * dropup. If dropupAuto is set to false, dropups must be called manually.
@@ -297,7 +297,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.dropupAuto = dropupAuto;
 		return this;
 	}
-	
+
 	/**
 	 * adds a header to the top of the menu; includes a close button by default
 	 *
@@ -307,7 +307,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return header;
 	}
-	
+
 	/**
 	 * adds a header to the top of the menu; includes a close button by default
 	 *
@@ -320,7 +320,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.header = header;
 		return this;
 	}
-	
+
 	/**
 	 * removes disabled options and optgroups from the menu data-hide-disabled: true
 	 *
@@ -330,7 +330,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return hideDisabled;
 	}
-	
+
 	/**
 	 * removes disabled options and optgroups from the menu data-hide-disabled: true
 	 *
@@ -343,7 +343,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.hideDisabled = hideDisabled;
 		return this;
 	}
-	
+
 	/**
 	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different naming scheme.
 	 *
@@ -353,7 +353,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return iconBase;
 	}
-	
+
 	/**
 	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different naming scheme.
 	 *
@@ -366,7 +366,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.iconBase = iconBase;
 		return this;
 	}
-	
+
 	/**
 	 * When set to true, adds a search box to the top of the selectpicker dropdown.
 	 *
@@ -376,7 +376,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return liveSearch;
 	}
-	
+
 	/**
 	 * When set to true, adds a search box to the top of the selectpicker dropdown.
 	 *
@@ -389,7 +389,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.liveSearch = liveSearch;
 		return this;
 	}
-	
+
 	/**
 	 * Setting liveSearchNormalize to true allows for accent-insensitive searching.
 	 *
@@ -399,7 +399,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return liveSearchNormalize;
 	}
-	
+
 	/**
 	 * Setting liveSearchNormalize to true allows for accent-insensitive searching.
 	 *
@@ -412,7 +412,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.liveSearchNormalize = liveSearchNormalize;
 		return this;
 	}
-	
+
 	/**
 	 * When set to a string, a placeholder attribute equal to the string will be added to the liveSearch input.
 	 *
@@ -422,7 +422,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return liveSearchPlaceholder;
 	}
-	
+
 	/**
 	 * When set to a string, a placeholder attribute equal to the string will be added to the liveSearch input.
 	 *
@@ -435,7 +435,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.liveSearchPlaceholder = liveSearchPlaceholder;
 		return this;
 	}
-	
+
 	/**
 	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to startsWith, searching
 	 * for pl will return only Plum and Plantain.
@@ -446,7 +446,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return liveSearchStyle;
 	}
-	
+
 	/**
 	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to startsWith, searching
 	 * for pl will return only Plum and Plantain.
@@ -460,7 +460,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.liveSearchStyle = liveSearchStyle;
 		return this;
 	}
-	
+
 	/**
 	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in which case it only
 	 * applies to that optgroup.
@@ -471,7 +471,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return maxOptions;
 	}
-	
+
 	/**
 	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in which case it only
 	 * applies to that optgroup.
@@ -485,7 +485,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.maxOptions = maxOptions;
 		return this;
 	}
-	
+
 	/**
 	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an array. array[0] is
 	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text is used for both the
@@ -497,7 +497,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return maxOptionsText;
 	}
-	
+
 	/**
 	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an array. array[0] is
 	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text is used for both the
@@ -512,7 +512,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.maxOptionsText = maxOptionsText;
 		return this;
 	}
-	
+
 	/**
 	 * When set to true, enables the devices native menu for select menus.
 	 *
@@ -522,7 +522,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return mobile;
 	}
-	
+
 	/**
 	 * When set to true, enables the devices native menu for select menus.
 	 *
@@ -535,7 +535,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.mobile = mobile;
 		return this;
 	}
-	
+
 	/**
 	 * Set the character displayed in the button that separates selected options.
 	 *
@@ -545,7 +545,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return multipleSeparator;
 	}
-	
+
 	/**
 	 * Set the character displayed in the button that separates selected options.
 	 *
@@ -558,7 +558,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.multipleSeparator = multipleSeparator;
 		return this;
 	}
-	
+
 	/**
 	 * The text that is displayed when a multiple select has no selected options.
 	 *
@@ -568,7 +568,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return noneSelectedText;
 	}
-	
+
 	/**
 	 * The text that is displayed when a multiple select has no selected options.
 	 *
@@ -581,7 +581,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.noneSelectedText = noneSelectedText;
 		return this;
 	}
-	
+
 	/**
 	 * The text on the button that selects all options when actionsBox is enabled.
 	 *
@@ -591,7 +591,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return selectAllText;
 	}
-	
+
 	/**
 	 * The text on the button that selects all options when actionsBox is enabled.
 	 *
@@ -604,7 +604,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.selectAllText = selectAllText;
 		return this;
 	}
-	
+
 	/**
 	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
 	 * title. count displays the total number of selected options. count > x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
@@ -615,7 +615,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return selectedTextFormat;
 	}
-	
+
 	/**
 	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
 	 * title. count displays the total number of selected options. count > x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
@@ -629,7 +629,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.selectedTextFormat = selectedTextFormat;
 		return this;
 	}
-	
+
 	/**
 	 * When set to true, treats the tab character like the enter or space characters within the selectpicker dropdown.
 	 *
@@ -639,7 +639,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return selectOnTab;
 	}
-	
+
 	/**
 	 * When set to true, treats the tab character like the enter or space characters within the selectpicker dropdown.
 	 *
@@ -652,7 +652,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.selectOnTab = selectOnTab;
 		return this;
 	}
-	
+
 	/**
 	 * When set to true, display custom HTML associated with selected option(s) in the button. When set to false, the option value will be displayed instead.
 	 *
@@ -662,7 +662,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return showContent;
 	}
-	
+
 	/**
 	 * When set to true, display custom HTML associated with selected option(s) in the button. When set to false, the option value will be displayed instead.
 	 *
@@ -675,7 +675,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.showContent = showContent;
 		return this;
 	}
-	
+
 	/**
 	 * When set to true, display icon(s) associated with selected option(s) in the button.
 	 *
@@ -685,7 +685,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return showIcon;
 	}
-	
+
 	/**
 	 * When set to true, display icon(s) associated with selected option(s) in the button.
 	 *
@@ -698,7 +698,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.showIcon = showIcon;
 		return this;
 	}
-	
+
 	/**
 	 * When set to true, display subtext associated with a selected option in the button.
 	 *
@@ -708,7 +708,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return showSubtext;
 	}
-	
+
 	/**
 	 * When set to true, display subtext associated with a selected option in the button.
 	 *
@@ -721,7 +721,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.showSubtext = showSubtext;
 		return this;
 	}
-	
+
 	/**
 	 * Show checkmark on selected option (for items without multiple attribute).
 	 *
@@ -731,7 +731,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return showTick;
 	}
-	
+
 	/**
 	 * Show checkmark on selected option (for items without multiple attribute).
 	 *
@@ -744,7 +744,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.showTick = showTick;
 		return this;
 	}
-	
+
 	/**
 	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number of items, even if
 	 * the dropdown is cut off. When set to false, the menu will always show all items.
@@ -755,7 +755,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return size;
 	}
-	
+
 	/**
 	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number of items, even if
 	 * the dropdown is cut off. When set to false, the menu will always show all items.
@@ -769,7 +769,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.size = size;
 		return this;
 	}
-	
+
 	/**
 	 * When set to a string, add the value to the buttons style.
 	 *
@@ -779,7 +779,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return style;
 	}
-	
+
 	/**
 	 * When set to a string, add the value to the buttons style.
 	 *
@@ -792,7 +792,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.style = style;
 		return this;
 	}
-	
+
 	/**
 	 * Set which icon to use to display as the tick next to selected options.
 	 *
@@ -802,7 +802,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return tickIcon;
 	}
-	
+
 	/**
 	 * Set which icon to use to display as the tick next to selected options.
 	 *
@@ -815,7 +815,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.tickIcon = tickIcon;
 		return this;
 	}
-	
+
 	/**
 	 * The default title for the selectpicker.
 	 *
@@ -825,7 +825,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return title;
 	}
-	
+
 	/**
 	 * The default title for the selectpicker.
 	 *
@@ -838,7 +838,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.title = title;
 		return this;
 	}
-	
+
 	/**
 	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced inline to the given
 	 * value. When set to false, all width information is removed.
@@ -849,7 +849,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return width;
 	}
-	
+
 	/**
 	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced inline to the given
 	 * value. When set to false, all width information is removed.
@@ -863,7 +863,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.width = width;
 		return this;
 	}
-	
+
 	/**
 	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be added to all sides.
 	 * Alternatively, an array of integers can be used in the format [top, right, bottom, left].
@@ -874,7 +874,7 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	{
 		return windowPadding;
 	}
-	
+
 	/**
 	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be added to all sides.
 	 * Alternatively, an array of integers can be used in the format [top, right, bottom, left].
@@ -888,5 +888,5 @@ public class BootstrapSelectOptions extends JavaScriptPart
 		this.windowPadding = windowPadding;
 		return this;
 	}
-	
+
 }
