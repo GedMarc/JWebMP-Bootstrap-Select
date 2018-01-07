@@ -43,7 +43,7 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 	{
 		if (!page.isConfigured())
 		{
-			JQueryPageConfigurator.setRequired(page.getBody(), true);
+			JQueryPageConfigurator.setRequired(true);
 			BootstrapPageConfigurator.setRequired(page.getBody(), true);
 			page.getBody().addJavaScriptReference(BootstrapSelectReferencePool.BootstrapSelect.getJavaScriptReference());
 			page.getBody().addCssReference(BootstrapSelectReferencePool.BootstrapSelect.getCssReference());

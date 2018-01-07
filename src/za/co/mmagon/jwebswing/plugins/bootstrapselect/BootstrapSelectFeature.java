@@ -3,6 +3,8 @@ package za.co.mmagon.jwebswing.plugins.bootstrapselect;
 import za.co.mmagon.jwebswing.Feature;
 import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+
 /**
  * Creates toast messages
  *
@@ -25,7 +27,7 @@ public class BootstrapSelectFeature extends Feature<BootstrapSelectOptions, Boot
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-		addQuery(getComponent().getJQueryID() + "selectpicker(" + getOptions() + ");" + getNewLine());
+		addQuery(getComponent().getJQueryID() + "selectpicker(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON + getNewLine());
 	}
 
 	/**
