@@ -3,7 +3,6 @@ package za.co.mmagon.jwebswing.plugins.bootstrapselect;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
-import za.co.mmagon.jwebswing.plugins.bootstrap.BootstrapPageConfigurator;
 import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 
 /**
@@ -44,7 +43,6 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		if (!page.isConfigured())
 		{
 			JQueryPageConfigurator.setRequired(true);
-			BootstrapPageConfigurator.setRequired(page.getBody(), true);
 			page.getBody().addJavaScriptReference(BootstrapSelectReferencePool.BootstrapSelect.getJavaScriptReference());
 			page.getBody().addCssReference(BootstrapSelectReferencePool.BootstrapSelect.getCssReference());
 		}
