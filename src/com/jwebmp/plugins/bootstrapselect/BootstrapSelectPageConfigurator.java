@@ -1,9 +1,9 @@
-package za.co.mmagon.jwebswing.plugins.bootstrapselect;
+package com.jwebmp.plugins.bootstrapselect;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
-import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.plugins.PluginInformation;
+import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
 
 /**
  * Configures the Bootstrap Page Configurator
@@ -23,8 +23,8 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://silviomoreto.github.io/bootstrap-select/",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BootstrapSelect.jar/download"
-) class BootstrapSelectPageConfigurator extends PageConfigurator
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BootstrapSelect.jar/download") class BootstrapSelectPageConfigurator
+		extends PageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;
@@ -43,8 +43,10 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		if (!page.isConfigured())
 		{
 			JQueryPageConfigurator.setRequired(true);
-			page.getBody().addJavaScriptReference(BootstrapSelectReferencePool.BootstrapSelect.getJavaScriptReference());
-			page.getBody().addCssReference(BootstrapSelectReferencePool.BootstrapSelect.getCssReference());
+			page.getBody()
+			    .addJavaScriptReference(BootstrapSelectReferencePool.BootstrapSelect.getJavaScriptReference());
+			page.getBody()
+			    .addCssReference(BootstrapSelectReferencePool.BootstrapSelect.getCssReference());
 		}
 		return page;
 	}

@@ -1,7 +1,7 @@
-package za.co.mmagon.jwebswing.plugins.bootstrapselect;
+package com.jwebmp.plugins.bootstrapselect;
 
-import za.co.mmagon.jwebswing.base.html.Select;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
+import com.jwebmp.base.html.Select;
+import com.jwebmp.plugins.ComponentInformation;
 
 import java.util.Objects;
 
@@ -11,9 +11,11 @@ import java.util.Objects;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-@ComponentInformation(name = "Bootstrap Select", description = "Turn checkboxes    and radio buttons    into toggle switches  ",
+@ComponentInformation(name = "Bootstrap Select",
+		description = "Turn checkboxes    and radio buttons    into toggle switches  ",
 		url = "https://github.com/GedMarc/JWebSwing-Bootstrap-Select")
-public class BootstrapSelect extends Select<BootstrapSelect>
+public class BootstrapSelect
+		extends Select<BootstrapSelect>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -59,7 +61,13 @@ public class BootstrapSelect extends Select<BootstrapSelect>
 	{
 		return getFeature().getOptions();
 	}
-	
+
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(super.hashCode(), getFeature());
+	}
+
 	@Override
 	public boolean equals(Object o)
 	{
@@ -77,11 +85,5 @@ public class BootstrapSelect extends Select<BootstrapSelect>
 		}
 		BootstrapSelect that = (BootstrapSelect) o;
 		return Objects.equals(getFeature(), that.getFeature());
-	}
-	
-	@Override
-	public int hashCode()
-	{
-		return Objects.hash(super.hashCode(), getFeature());
 	}
 }

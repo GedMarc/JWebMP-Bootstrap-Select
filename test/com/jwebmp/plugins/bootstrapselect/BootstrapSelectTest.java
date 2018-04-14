@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package za.co.mmagon.jwebswing.plugins.bootstrapselect;
+package com.jwebmp.plugins.bootstrapselect;
 
+import com.jwebmp.BaseTestClass;
+import com.jwebmp.Page;
+import com.jwebmp.base.html.Option;
+import com.jwebmp.plugins.bootstrap.forms.BSForm;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import za.co.mmagon.jwebswing.BaseTestClass;
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.base.html.Option;
-import za.co.mmagon.jwebswing.plugins.bootstrap.forms.BSForm;
 
 /**
  * @author Marc Magon
  */
-public class BootstrapSelectTest extends BaseTestClass
+public class BootstrapSelectTest
+		extends BaseTestClass
 {
 
 	public BootstrapSelectTest()
@@ -27,7 +28,8 @@ public class BootstrapSelectTest extends BaseTestClass
 	{
 		BootstrapSelect bs = new BootstrapSelect();
 		bs.setID("id");
-		bs.getOptions().setActionsBox(true);
+		bs.getOptions()
+		  .setActionsBox(true);
 		System.out.println(bs.toString(true));
 		Assertions.assertEquals("<select id=\"id\"></select>", bs.toString(0));
 	}
@@ -38,11 +40,10 @@ public class BootstrapSelectTest extends BaseTestClass
 		BootstrapSelect bs = new BootstrapSelect();
 		bs.setID("id");
 		bs.add(new Option<>("Option 1").setID("id"));
-		bs.getOptions().setActionsBox(true);
+		bs.getOptions()
+		  .setActionsBox(true);
 		System.out.println(bs.toString(true));
-		Assertions.assertEquals("<select id=\"id\">\n" +
-				                        "\t<option label=\"Option 1\" value=\"Option 1\" id=\"id\">Option 1</option>\n" +
-				                        "</select>", bs.toString(0));
+		Assertions.assertEquals("<select id=\"id\">\n" + "\t<option label=\"Option 1\" value=\"Option 1\" id=\"id\">Option 1</option>\n" + "</select>", bs.toString(0));
 	}
 
 	@Test
@@ -51,11 +52,11 @@ public class BootstrapSelectTest extends BaseTestClass
 		BootstrapSelect bs = new BootstrapSelect();
 		bs.setID("id");
 		bs.add(new Option<>("Option 1").setID("option"));
-		bs.getOptions().setActionsBox(true);
+		bs.getOptions()
+		  .setActionsBox(true);
 		System.out.println(bs.renderJavascript());
-		Assertions.assertEquals("$(\"#id\").selectpicker({\n" +
-				                        "  \"actionsBox\" : true\n" +
-				                        "});\n", bs.renderJavascript().toString());
+		Assertions.assertEquals("$(\"#id\").selectpicker({\n" + "  \"actionsBox\" : true\n" + "});\n", bs.renderJavascript()
+		                                                                                                 .toString());
 	}
 
 	@Test
@@ -65,10 +66,13 @@ public class BootstrapSelectTest extends BaseTestClass
 		BSForm form = new BSForm();
 		BootstrapSelect bs = new BootstrapSelect();
 		bs.setID("id");
-		p.getOptions().setDynamicRender(false);
-		p.getBody().add(form);
+		p.getOptions()
+		 .setDynamicRender(false);
+		p.getBody()
+		 .add(form);
 		form.add(bs);
 		System.out.println(p.toString(true));
-		Assertions.assertTrue(p.toString(0).contains("<script src=\"bower_components/bootstrap-select/dist/js/bootstrap-select.js\" type=\"text/javascript\"></script>"));
+		Assertions.assertTrue(p.toString(0)
+		                       .contains("<script src=\"bower_components/bootstrap-select/dist/js/bootstrap-select.js\" type=\"text/javascript\"></script>"));
 	}
 }

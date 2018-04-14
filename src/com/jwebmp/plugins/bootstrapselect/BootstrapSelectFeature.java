@@ -1,9 +1,9 @@
-package za.co.mmagon.jwebswing.plugins.bootstrapselect;
+package com.jwebmp.plugins.bootstrapselect;
 
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
+import com.jwebmp.Feature;
+import com.jwebmp.base.ComponentHierarchyBase;
 
-import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
 /**
  * Creates toast messages
@@ -11,7 +11,8 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRAC
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public class BootstrapSelectFeature extends Feature<BootstrapSelectOptions, BootstrapSelectFeature>
+public class BootstrapSelectFeature
+		extends Feature<BootstrapSelectOptions, BootstrapSelectFeature>
 {
 
 	private static final long serialVersionUID = 1L;
