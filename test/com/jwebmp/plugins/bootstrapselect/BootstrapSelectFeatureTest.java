@@ -22,7 +22,7 @@
  */
 package com.jwebmp.plugins.bootstrapselect;
 
-import com.jwebmp.BaseTestClass;
+import com.jwebmp.Page;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -30,7 +30,7 @@ import org.junit.jupiter.api.Test;
  * @author Marc Magon
  */
 public class BootstrapSelectFeatureTest
-		extends BaseTestClass
+
 {
 
 	public BootstrapSelectFeatureTest()
@@ -40,7 +40,7 @@ public class BootstrapSelectFeatureTest
 	@Test
 	public void testSomeMethod()
 	{
-		BootstrapSelectFeature bsf = new BootstrapSelectFeature(getInstance().getBody());
+		BootstrapSelectFeature bsf = new BootstrapSelectFeature(new Page().getBody());
 		bsf.getOptions()
 		   .setIconBase("fa fa-bell-o");
 		System.out.println(bsf.renderJavascript());

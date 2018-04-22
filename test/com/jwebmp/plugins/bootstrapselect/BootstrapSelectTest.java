@@ -5,7 +5,6 @@
  */
 package com.jwebmp.plugins.bootstrapselect;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.Page;
 import com.jwebmp.base.html.Option;
 import com.jwebmp.plugins.bootstrap.forms.BSForm;
@@ -16,7 +15,7 @@ import org.junit.jupiter.api.Test;
  * @author Marc Magon
  */
 public class BootstrapSelectTest
-		extends BaseTestClass
+
 {
 
 	public BootstrapSelectTest()
@@ -62,7 +61,7 @@ public class BootstrapSelectTest
 	@Test
 	public void testHtml()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 		BSForm form = new BSForm();
 		BootstrapSelect bs = new BootstrapSelect();
 		bs.setID("id");
