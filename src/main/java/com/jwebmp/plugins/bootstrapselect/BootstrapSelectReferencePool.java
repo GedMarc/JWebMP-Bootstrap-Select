@@ -28,7 +28,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-enum BootstrapSelectReferencePool implements ReferencePool
+enum BootstrapSelectReferencePool
+		implements ReferencePool
 {
 	BootstrapSelect(new JavascriptReference("BootstrapSelect", 2.3, "bower_components/bootstrap-select/dist/js/bootstrap-select.js"),
 	                new CSSReference("BootstrapSelect", 2.3, "bower_components/bootstrap-select/dist/css/bootstrap-select.css"));

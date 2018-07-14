@@ -3,7 +3,7 @@ package com.jwebmp.plugins.bootstrapselect;
 import com.jwebmp.Feature;
 import com.jwebmp.base.ComponentHierarchyBase;
 
-import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
  * Creates toast messages

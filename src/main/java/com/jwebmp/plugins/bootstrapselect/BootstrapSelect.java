@@ -3,8 +3,6 @@ package com.jwebmp.plugins.bootstrapselect;
 import com.jwebmp.base.html.Select;
 import com.jwebmp.plugins.ComponentInformation;
 
-import java.util.Objects;
-
 /**
  * Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
  *
@@ -63,27 +61,14 @@ public class BootstrapSelect
 	}
 
 	@Override
-	public int hashCode()
+	public boolean equals(Object o)
 	{
-		return Objects.hash(super.hashCode(), getFeature());
+		return super.equals(o);
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public int hashCode()
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof BootstrapSelect))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-		BootstrapSelect that = (BootstrapSelect) o;
-		return Objects.equals(getFeature(), that.getFeature());
+		return super.hashCode();
 	}
 }

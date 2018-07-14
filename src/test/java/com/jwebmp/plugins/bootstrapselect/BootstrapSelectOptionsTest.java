@@ -37,8 +37,8 @@ public class BootstrapSelectOptionsTest
 		bso.setActionsBox(true);
 		System.out.println(bso);
 		Assertions.assertEquals("{\n" +
-				                        "  \"actionsBox\" : true\n" +
-				                        "}", bso.toString());
+		                        "  \"actionsBox\" : true\n" +
+		                        "}", bso.toString());
 	}
 
 }

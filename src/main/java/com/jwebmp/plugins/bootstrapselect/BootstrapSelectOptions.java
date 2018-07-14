@@ -25,7 +25,8 @@ import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-public class BootstrapSelectOptions extends JavaScriptPart
+public class BootstrapSelectOptions<J extends BootstrapSelectOptions<J>>
+		extends JavaScriptPart<J>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -39,7 +40,8 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String container;
 	/**
-	 * Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection.When set to a function, the first
+	 * Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection.When set to
+	 * a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string.*
 	 */
 	private String countSelectedText;
@@ -48,11 +50,13 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String deselectAllText;
 	/**
-	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the left.*
+	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the
+	 * left.*
 	 */
 	private Boolean dropdownAlignRight;
 	/**
-	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally. Otherwise, it becomes a
+	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally.
+	 * Otherwise, it becomes a
 	 * dropup. If dropupAuto is set to false, dropups must be called manually.*
 	 */
 	private Boolean dropupAuto;
@@ -65,7 +69,8 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private Boolean hideDisabled;
 	/**
-	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different naming scheme.*
+	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different
+	 * naming scheme.*
 	 */
 	private String iconBase;
 	/**
@@ -81,18 +86,22 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String liveSearchPlaceholder;
 	/**
-	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to startsWith, searching
+	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to
+	 * startsWith, searching
 	 * for pl will return only Plum and Plantain.*
 	 */
 	private String liveSearchStyle;
 	/**
-	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in which case it
+	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in
+	 * which case it
 	 * only applies to that optgroup.*
 	 */
 	private Integer maxOptions;
 	/**
-	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an array. array[0] is
-	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text is used for both the
+	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an
+	 * array. array[0] is
+	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text
+	 * is used for both the
 	 * element and the optgroup.*
 	 */
 	private String maxOptionsText;
@@ -113,8 +122,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String selectAllText;
 	/**
-	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
-	 * title. count displays the total number of selected options. count greather than x behaves like values until the number of selected options is greater than x; after that, it behaves like count.*
+	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the
+	 * select elements
+	 * title. count displays the total number of selected options. count greather than x behaves like values until the number of selected options is greater than x; after that, it
+	 * behaves like count.*
 	 */
 	private String selectedTextFormat;
 	/**
@@ -138,7 +149,8 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private Boolean showTick;
 	/**
-	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number of items, even if
+	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number
+	 * of items, even if
 	 * the dropdown is cut off. When set to false, the menu will always show all items.*
 	 */
 	private Integer size;
@@ -155,12 +167,14 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 */
 	private String title;
 	/**
-	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced inline to the given
+	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced
+	 * inline to the given
 	 * value. When set to false, all width information is removed.*
 	 */
 	private Integer width;
 	/**
-	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be added to all sides.
+	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be
+	 * added to all sides.
 	 * Alternatively, an array of integers can be used in the format [top, right, bottom, left].*
 	 */
 	private Integer windowPadding;
@@ -190,10 +204,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setActionsBox(Boolean actionsBox)
+	public J setActionsBox(Boolean actionsBox)
 	{
 		this.actionsBox = actionsBox;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -213,14 +227,15 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setContainer(String container)
+	public J setContainer(String container)
 	{
 		this.container = container;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * "Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
+	 * "Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection. When set
+	 * to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string."
 	 *
 	 * @return
@@ -231,17 +246,18 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * "Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection. When set to a function, the first
+	 * "Sets the format for the text displayed when selectedTextFormat is count or count greater than #. {0} is the selected amount. {1} is total available for selection. When set
+	 * to a function, the first
 	 * parameter is the number of selected options, and the second is the total number of options. The function must return a string."
 	 *
 	 * @param countSelectedText
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setCountSelectedText(String countSelectedText)
+	public J setCountSelectedText(String countSelectedText)
 	{
 		this.countSelectedText = countSelectedText;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -261,14 +277,15 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setDeselectAllText(String deselectAllText)
+	public J setDeselectAllText(String deselectAllText)
 	{
 		this.deselectAllText = deselectAllText;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the left.
+	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the
+	 * left.
 	 *
 	 * @return
 	 */
@@ -278,20 +295,22 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the left.
+	 * Align the menu to the right instead of the left. If set to auto, the menu will automatically align right if there isnt room for the menus full width when aligned to the
+	 * left.
 	 *
 	 * @param dropdownAlignRight
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setDropdownAlignRight(Boolean dropdownAlignRight)
+	public J setDropdownAlignRight(Boolean dropdownAlignRight)
 	{
 		this.dropdownAlignRight = dropdownAlignRight;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally. Otherwise, it becomes a
+	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally.
+	 * Otherwise, it becomes a
 	 * dropup. If dropupAuto is set to false, dropups must be called manually.
 	 *
 	 * @return
@@ -302,17 +321,18 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally. Otherwise, it becomes a
+	 * checks to see which has more room, above or below. If the dropup has enough room to fully open normally, but there is more room above, the dropup still opens normally.
+	 * Otherwise, it becomes a
 	 * dropup. If dropupAuto is set to false, dropups must be called manually.
 	 *
 	 * @param dropupAuto
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setDropupAuto(Boolean dropupAuto)
+	public J setDropupAuto(Boolean dropupAuto)
 	{
 		this.dropupAuto = dropupAuto;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -332,10 +352,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setHeader(String header)
+	public J setHeader(String header)
 	{
 		this.header = header;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -355,14 +375,15 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setHideDisabled(Boolean hideDisabled)
+	public J setHideDisabled(Boolean hideDisabled)
 	{
 		this.hideDisabled = hideDisabled;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different naming scheme.
+	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different
+	 * naming scheme.
 	 *
 	 * @return
 	 */
@@ -372,16 +393,17 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different naming scheme.
+	 * Set the base to use a different icon font instead of Glyphicons. If changing iconBase, you might also want to change tickIcon, in case the new icon font uses a different
+	 * naming scheme.
 	 *
 	 * @param iconBase
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setIconBase(String iconBase)
+	public J setIconBase(String iconBase)
 	{
 		this.iconBase = iconBase;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -401,10 +423,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setLiveSearch(Boolean liveSearch)
+	public J setLiveSearch(Boolean liveSearch)
 	{
 		this.liveSearch = liveSearch;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -424,10 +446,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setLiveSearchNormalize(Boolean liveSearchNormalize)
+	public J setLiveSearchNormalize(Boolean liveSearchNormalize)
 	{
 		this.liveSearchNormalize = liveSearchNormalize;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -447,14 +469,15 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setLiveSearchPlaceholder(String liveSearchPlaceholder)
+	public J setLiveSearchPlaceholder(String liveSearchPlaceholder)
 	{
 		this.liveSearchPlaceholder = liveSearchPlaceholder;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to startsWith, searching
+	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to
+	 * startsWith, searching
 	 * for pl will return only Plum and Plantain.
 	 *
 	 * @return
@@ -465,21 +488,23 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to startsWith, searching
+	 * When set to contains, searching will reveal options that contain the searched text. For example, searching for pl with return both Apple, Plum, and Plantain. When set to
+	 * startsWith, searching
 	 * for pl will return only Plum and Plantain.
 	 *
 	 * @param liveSearchStyle
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setLiveSearchStyle(String liveSearchStyle)
+	public J setLiveSearchStyle(String liveSearchStyle)
 	{
 		this.liveSearchStyle = liveSearchStyle;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in which case it only
+	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in
+	 * which case it only
 	 * applies to that optgroup.
 	 *
 	 * @return
@@ -490,22 +515,25 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in which case it only
+	 * When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.This option can also exist as a data-attribute for an optgroup, in
+	 * which case it only
 	 * applies to that optgroup.
 	 *
 	 * @param maxOptions
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setMaxOptions(Integer maxOptions)
+	public J setMaxOptions(Integer maxOptions)
 	{
 		this.maxOptions = maxOptions;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an array. array[0] is
-	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text is used for both the
+	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an
+	 * array. array[0] is
+	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text
+	 * is used for both the
 	 * element and the optgroup.
 	 *
 	 * @return
@@ -516,18 +544,20 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an array. array[0] is
-	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text is used for both the
+	 * The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected. If a function is used, it must return an
+	 * array. array[0] is
+	 * the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text
+	 * is used for both the
 	 * element and the optgroup.
 	 *
 	 * @param maxOptionsText
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setMaxOptionsText(String maxOptionsText)
+	public J setMaxOptionsText(String maxOptionsText)
 	{
 		this.maxOptionsText = maxOptionsText;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -547,10 +577,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setMobile(Boolean mobile)
+	public J setMobile(Boolean mobile)
 	{
 		this.mobile = mobile;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -570,10 +600,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setMultipleSeparator(String multipleSeparator)
+	public J setMultipleSeparator(String multipleSeparator)
 	{
 		this.multipleSeparator = multipleSeparator;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -593,10 +623,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setNoneSelectedText(String noneSelectedText)
+	public J setNoneSelectedText(String noneSelectedText)
 	{
 		this.noneSelectedText = noneSelectedText;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -616,15 +646,17 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setSelectAllText(String selectAllText)
+	public J setSelectAllText(String selectAllText)
 	{
 		this.selectAllText = selectAllText;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
-	 * title. count displays the total number of selected options. count greater than x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
+	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the
+	 * select elements
+	 * title. count displays the total number of selected options. count greater than x behaves like values until the number of selected options is greater than x; after that, it
+	 * behaves like count.
 	 *
 	 * @return
 	 */
@@ -634,17 +666,19 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the select elements
-	 * title. count displays the total number of selected options. count greater than x behaves like values until the number of selected options is greater than x; after that, it behaves like count.
+	 * Specifies how the selection is displayed with a multiple select. Values displays a list of the selected options (separated by multipleSeparator. static simply displays the
+	 * select elements
+	 * title. count displays the total number of selected options. count greater than x behaves like values until the number of selected options is greater than x; after that, it
+	 * behaves like count.
 	 *
 	 * @param selectedTextFormat
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setSelectedTextFormat(String selectedTextFormat)
+	public J setSelectedTextFormat(String selectedTextFormat)
 	{
 		this.selectedTextFormat = selectedTextFormat;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -664,10 +698,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setSelectOnTab(Boolean selectOnTab)
+	public J setSelectOnTab(Boolean selectOnTab)
 	{
 		this.selectOnTab = selectOnTab;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -687,10 +721,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setShowContent(Boolean showContent)
+	public J setShowContent(Boolean showContent)
 	{
 		this.showContent = showContent;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -710,10 +744,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setShowIcon(Boolean showIcon)
+	public J setShowIcon(Boolean showIcon)
 	{
 		this.showIcon = showIcon;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -733,10 +767,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setShowSubtext(Boolean showSubtext)
+	public J setShowSubtext(Boolean showSubtext)
 	{
 		this.showSubtext = showSubtext;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -756,14 +790,15 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setShowTick(Boolean showTick)
+	public J setShowTick(Boolean showTick)
 	{
 		this.showTick = showTick;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number of items, even if
+	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number
+	 * of items, even if
 	 * the dropdown is cut off. When set to false, the menu will always show all items.
 	 *
 	 * @return
@@ -774,17 +809,18 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number of items, even if
+	 * When set to auto, the menu always opens up to show as many items as the window will allow without being cut off. When set to an integer, the menu will show the given number
+	 * of items, even if
 	 * the dropdown is cut off. When set to false, the menu will always show all items.
 	 *
 	 * @param size
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setSize(Integer size)
+	public J setSize(Integer size)
 	{
 		this.size = size;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -804,10 +840,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setStyle(String style)
+	public J setStyle(String style)
 	{
 		this.style = style;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -827,10 +863,10 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setTickIcon(String tickIcon)
+	public J setTickIcon(String tickIcon)
 	{
 		this.tickIcon = tickIcon;
-		return this;
+		return (J) this;
 	}
 
 	/**
@@ -850,14 +886,15 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setTitle(String title)
+	public J setTitle(String title)
 	{
 		this.title = title;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced inline to the given
+	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced
+	 * inline to the given
 	 * value. When set to false, all width information is removed.
 	 *
 	 * @return
@@ -868,21 +905,23 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced inline to the given
+	 * When set to auto, the width of the selectpicker is automatically adjusted to accommodate the widest option. When set to a css-width, the width of the selectpicker is forced
+	 * inline to the given
 	 * value. When set to false, all width information is removed.
 	 *
 	 * @param width
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setWidth(Integer width)
+	public J setWidth(Integer width)
 	{
 		this.width = width;
-		return this;
+		return (J) this;
 	}
 
 	/**
-	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be added to all sides.
+	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be
+	 * added to all sides.
 	 * Alternatively, an array of integers can be used in the format [top, right, bottom, left].
 	 *
 	 * @return
@@ -893,17 +932,18 @@ public class BootstrapSelectOptions extends JavaScriptPart
 	}
 
 	/**
-	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be added to all sides.
+	 * This is useful in cases where the window has areas that the dropdown menu should not cover - for instance a fixed header. When set to an integer, the same padding will be
+	 * added to all sides.
 	 * Alternatively, an array of integers can be used in the format [top, right, bottom, left].
 	 *
 	 * @param windowPadding
 	 *
 	 * @return
 	 */
-	public BootstrapSelectOptions setWindowPadding(Integer windowPadding)
+	public J setWindowPadding(Integer windowPadding)
 	{
 		this.windowPadding = windowPadding;
-		return this;
+		return (J) this;
 	}
 
 }
