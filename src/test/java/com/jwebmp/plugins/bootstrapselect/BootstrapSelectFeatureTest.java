@@ -22,7 +22,7 @@
  */
 package com.jwebmp.plugins.bootstrapselect;
 
-import com.jwebmp.Page;
+import com.jwebmp.core.Page;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

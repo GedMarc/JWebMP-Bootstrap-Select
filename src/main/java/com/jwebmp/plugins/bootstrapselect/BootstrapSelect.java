@@ -1,7 +1,7 @@
 package com.jwebmp.plugins.bootstrapselect;
 
-import com.jwebmp.base.html.Select;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.base.html.Select;
+import com.jwebmp.core.plugins.ComponentInformation;
 
 /**
  * Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
