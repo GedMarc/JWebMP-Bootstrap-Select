@@ -10,4 +10,5 @@ module com.jwebmp.plugins.bootstrapselect {
 
 	provides IPageConfigurator with BootstrapSelectPageConfigurator;
 
+	opens com.jwebmp.plugins.bootstrapselect to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
