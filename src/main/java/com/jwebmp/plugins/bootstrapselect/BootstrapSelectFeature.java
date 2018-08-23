@@ -2,6 +2,7 @@ package com.jwebmp.plugins.bootstrapselect;
 
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.ComponentHierarchyBase;
+import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 
 import static com.jwebmp.core.utilities.StaticStrings.*;
 
@@ -12,7 +13,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since 09 Jun 2017
  */
 public class BootstrapSelectFeature
-		extends Feature<BootstrapSelectOptions, BootstrapSelectFeature>
+		extends Feature<GlobalFeatures, BootstrapSelectOptions, BootstrapSelectFeature>
 {
 
 	private static final long serialVersionUID = 1L;
