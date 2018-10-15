@@ -20,14 +20,14 @@ import javax.validation.constraints.NotNull;
 		pluginCategories = "select, dropdown, bootstrap, ui,web ui, framework",
 		pluginSubtitle = "Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.",
 		pluginSourceUrl = "https://github.com/silviomoreto/bootstrap-select",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-Bootstrap-Select/wiki",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-Bootstrap-Select",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Bootstrap-Select/wiki",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-Bootstrap-Select",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://silviomoreto.github.io/bootstrap-select/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BootstrapSelect.jar/download")
 public class BootstrapSelectPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<BootstrapSelectPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled

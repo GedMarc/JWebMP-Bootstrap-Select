@@ -11,7 +11,7 @@ import com.jwebmp.core.plugins.ComponentInformation;
  */
 @ComponentInformation(name = "Bootstrap Select",
 		description = "Turn checkboxes    and radio buttons    into toggle switches  ",
-		url = "https://github.com/GedMarc/JWebSwing-Bootstrap-Select")
+		url = "https://github.com/GedMarc/JWebMP-Bootstrap-Select")
 public class BootstrapSelect
 		extends Select<BootstrapSelect>
 {
