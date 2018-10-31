@@ -16,7 +16,7 @@ public class BootstrapSelect
 		extends Select<BootstrapSelect>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The feature for this select
 	 */
@@ -61,14 +61,14 @@ public class BootstrapSelect
 	}
 
 	@Override
-	public boolean equals(Object o)
-	{
-		return super.equals(o);
-	}
-
-	@Override
 	public int hashCode()
 	{
 		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
 	}
 }

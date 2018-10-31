@@ -16,7 +16,6 @@ public class BootstrapSelectFeature
 		extends Feature<GlobalFeatures, BootstrapSelectOptions, BootstrapSelectFeature>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new BootstrapSelectFeature

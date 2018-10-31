@@ -29,7 +29,6 @@ public class BootstrapSelectOptions<J extends BootstrapSelectOptions<J>>
 		extends JavaScriptPart<J>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * When set to true, adds two buttons to the top of the dropdown menu (Select All Deselect All).*
