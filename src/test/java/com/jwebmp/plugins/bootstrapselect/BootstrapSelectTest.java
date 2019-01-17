@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * @author Marc Magon
+ * @author GedMarc
  */
 public class BootstrapSelectTest
 

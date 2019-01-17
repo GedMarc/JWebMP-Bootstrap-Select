@@ -6,7 +6,7 @@ import com.jwebmp.core.plugins.ComponentInformation;
 /**
  * Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements.
  *
- * @author Marc Magon
+ * @author GedMarc
  * @since 09 Jun 2017
  */
 @ComponentInformation(name = "Bootstrap Select",
