@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.bootstrapselect.BootstrapSelectPageConfigurator;
-import com.jwebmp.plugins.bootstrapselect.implementations.BootstrapSelectExclusionsModule;
-
 module com.jwebmp.plugins.bootstrapselect {
 	exports com.jwebmp.plugins.bootstrapselect;
 
@@ -13,10 +7,10 @@ module com.jwebmp.plugins.bootstrapselect {
 	requires java.validation;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with BootstrapSelectPageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.bootstrapselect.BootstrapSelectPageConfigurator;
 
-	provides IGuiceScanModuleExclusions with BootstrapSelectExclusionsModule;
-	provides IGuiceScanJarExclusions with BootstrapSelectExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.bootstrapselect.implementations.BootstrapSelectExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.bootstrapselect.implementations.BootstrapSelectExclusionsModule;
 
 	opens com.jwebmp.plugins.bootstrapselect to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
